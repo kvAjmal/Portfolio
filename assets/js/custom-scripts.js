@@ -172,6 +172,7 @@
 
 
 
+
 function submitForm(){
     // Initiate Variables With Form Content
 
@@ -183,6 +184,9 @@ function submitForm(){
 
         success:function (response){
             formSuccess();
+            setTimeout(function(){// wait for 5 secs(2)
+              location.reload(); // then reload the page.(3)
+           }, 5000);
             $("#contactForm")[0].reset();
            
         },
